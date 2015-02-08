@@ -16,7 +16,8 @@ plot2 <- function() {
  data_sub$dateTime <- strptime(data_sub$dateTime, "%Y-%m-%d %H:%M:%S")
  
  ## Open png graphic device
- png(filename="plot2.png", width =480, height = 480, units = "px", type="cairo-png")
+ png(filename="plot2.png", width =480, height = 480, units = "px", 
+		type="cairo-png", bg="transparent")
  
  ## Create plot of dateTime and Global_active_power
  plot(data_sub$dateTime, data_sub$Global_active_power, type="l", 

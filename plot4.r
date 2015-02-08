@@ -16,8 +16,9 @@ plot4 <- function() {
  data_sub$dateTime <- strptime(data_sub$dateTime, "%Y-%m-%d %H:%M:%S")
  
  ## Open png graphic device
- png(filename="plot4.png", width =480, height = 480, units = "px", type="cairo-png")
- 
+ png(filename="plot4.png", width =480, height = 480, units = "px", 
+		type="cairo-png", bg="transparent")
+		
  ## Set parameter for plots per row
  par(mfrow = c(2, 2))
  

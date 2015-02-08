@@ -16,7 +16,8 @@ plot3 <- function() {
  data_sub$dateTime <- strptime(data_sub$dateTime, "%Y-%m-%d %H:%M:%S")
  
  ## Open png graphic device
- png(filename="plot3.png", width =480, height = 480, units = "px", type="cairo-png")
+ png(filename="plot3.png", width =480, height = 480, units = "px", 
+		type="cairo-png", bg="transparent")
  
  ## Create plot of dateTime and Sub metering 1, 2, and 3
  with(data_sub, plot(dateTime, Sub_metering_1, type="n", xlab="", 

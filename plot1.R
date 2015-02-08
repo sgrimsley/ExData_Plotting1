@@ -16,7 +16,8 @@ plot1 <- function() {
  data_sub$dateTime <- strptime(data_sub$dateTime, "%Y-%m-%d %H:%M:%S")
  
  ## Open png graphic device
- png(filename="plot1.png", width =480, height = 480, units = "px", type="cairo-png")
+ png(filename="plot1.png", width =480, height = 480, units = "px", 
+		type="cairo-png", bg="transparent")
  
  ## Create histogram of Global Active Power
  hist(data_sub$Global_active_power, main= "Global Active Power", 
